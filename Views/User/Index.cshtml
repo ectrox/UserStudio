@@ -1,0 +1,15 @@
+﻿
+@{
+}
+
+
+<a asp-controller="user" asp-action="add">Create new user</a>
+@if (ViewBag.users.Count > 0)
+{
+    @foreach (User user in ViewBag.users)
+    {
+        <p>Welcome, @user.Username!</p>
+    }
+}
+
+
