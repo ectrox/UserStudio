@@ -1,9 +1,28 @@
-﻿@{
-}
-<form name="addUserForm" method="post" asp-controller="User" asp-action="Add">
-    <p>Username: </p><input name="username" type="text" />
-    <p>Email: </p><input name="email" type="text" />
-    <p>Password: </p><input name="password" type="password"/>
-    <p>Verify password: </p><input name="verify" type="password"/>
-    <input type="submit"/>
-</form>
+﻿@model UserStudio.ViewModels.AddUserViewModel
+
+<h1>Create new user</h1>
+
+<div asp-validation-summary="All">
+    <form name="addUserForm" method="post" asp-controller="User" asp-action="Add">
+
+        <div class="form-group">
+            <label asp-for="Username"></label>
+            <input class="form-control" asp-for="Username" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input class="form-control" asp-for="Email" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Password"></label>
+            <input class="form-control" asp-for="Password" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Verify"></label>
+            <input class="form-control" asp-for="Verify" />
+        </div>
+
+
+        <input type="submit" value="Sign Up" />
+    </form>
+</div>
